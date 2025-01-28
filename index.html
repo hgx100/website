@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <link href="styles/tailwind.css" rel="stylesheet">
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Under Construction</title>
@@ -12,24 +11,19 @@
     } else {
       document.documentElement.classList.remove('dark');
     }
-  </script>
-  <script>
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-      if (event.matches) {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
+      document.documentElement.classList.toggle('dark', event.matches);
     });
-  </script>
-  <script>
+
     // Random messages for humor
     const messages = [
-      "Our developers are currently taming wild code. 🐉",
-      "Rome wasn’t built in a day, and neither is this site. 🏛️",
-      "Loading creativity... Please wait. 🚧",
-      "We promise it’ll be worth the wait. Probably. 🚀",
-      "Construction ahead! Slow down and stay tuned. 🛠️"
+      "This might be something brilliant. Or not. Who knows? 🤷‍♂️",
+      "Coming... eventually. Or not. Let's see. 🚶‍♂️",
+      "Patience is a virtue, and you seem virtuous. 🕊️",
+      "Is this going to be amazing? We'll find out together. 🌀",
+      "Construction sites are messy. So is creativity. 👷‍♂️",
+      "Don’t hold your breath. But maybe keep an eye on it. 👀",
+      "Placeholder text for a placeholder life. 💭"
     ];
 
     // Display a random message on page load
@@ -43,14 +37,11 @@
   <div class="text-center p-8 max-w-md mx-auto">
     <h1 class="text-4xl font-bold mb-4 flex items-center justify-center">🚧 <span class="mx-2">Under Construction</span> 🚧</h1>
     <p class="text-lg mb-6">
-      We’re crafting something exciting, but we’re not ready to reveal it yet. What’s coming here? Even we’re not 100% sure. Stay tuned to find out!
+      Something *might* happen here. It might not. Check back in a year... or two.
     </p>
     <p id="random-message" class="text-lg font-medium text-yellow-600 dark:text-yellow-400 mb-6"></p>
-    <div class="relative h-2 w-full bg-gray-300 dark:bg-gray-700 rounded-full overflow-hidden">
-      <div class="absolute h-full bg-yellow-500 dark:bg-yellow-400 animate-pulse" style="width: 50%;"></div>
-    </div>
-    <p class="text-sm mt-4">If you have any questions, feel free to reach out: <a href="mailto:contact@boxmaster.org" class="text-blue-600 dark:text-blue-400 underline">contact@boxmaster.org</a></p>
-    <p class="italic text-sm mt-2">Meanwhile, enjoy this peaceful void...✨</p>
+    <p class="text-sm mt-4">Questions? Complaints? Existential crises? Email me: <a href="mailto:contact@boxmaster.org" class="text-blue-600 dark:text-blue-400 underline">contact@boxmaster.org</a></p>
+    <p class="italic text-sm mt-2">Meanwhile, embrace the void. It's nice here. ✨</p>
   </div>
 </body>
 </html>
