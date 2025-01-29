@@ -1,47 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark:bg-gray-900">
 <head>
-  <link href="styles/tailwind.css" rel="stylesheet">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Under Construction</title>
-  <script>
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-      document.documentElement.classList.toggle('dark', event.matches);
-    });
-
-    // Random messages for humor
-    const messages = [
-      "This might be something brilliant. Or not. Who knows? 🤷‍♂️",
-      "Coming... eventually. Or not. Let's see. 🚶‍♂️",
-      "Patience is a virtue, and you seem virtuous. 🕊️",
-      "Is this going to be amazing? We'll find out together. 🌀",
-      "Construction sites are messy. So is creativity. 👷‍♂️",
-      "Don’t hold your breath. But maybe keep an eye on it. 👀",
-      "Placeholder text for a placeholder life. 💭"
-    ];
-
-    // Display a random message on page load
-    document.addEventListener('DOMContentLoaded', () => {
-      const messageElement = document.getElementById('random-message');
-      messageElement.textContent = messages[Math.floor(Math.random() * messages.length)];
-    });
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Box in Progress | boxmaster.org</title>
+    <link href="./styles/tailwind.css" rel="stylesheet">
+    <script>
+        // Auto-detect dark mode
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
 </head>
-<body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100 flex items-center justify-center h-screen">
-  <div class="text-center p-8 max-w-md mx-auto">
-    <h1 class="text-4xl font-bold mb-4 flex items-center justify-center">🚧 <span class="mx-2">Under Construction</span> 🚧</h1>
-    <p class="text-lg mb-6">
-      Something *might* happen here. It might not. Check back in a year... or two.
-    </p>
-    <p id="random-message" class="text-lg font-medium text-yellow-600 dark:text-yellow-400 mb-6"></p>
-    <p class="text-sm mt-4">Questions? Complaints? Existential crises? Email me: <a href="mailto:contact@boxmaster.org" class="text-blue-600 dark:text-blue-400 underline">contact@boxmaster.org</a></p>
-    <p class="italic text-sm mt-2">Meanwhile, embrace the void. It's nice here. ✨</p>
-  </div>
+<body class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+    <main class="flex flex-col items-center justify-center min-h-screen px-4 text-center">
+        <div class="max-w-2xl space-y-6">
+            <h1 class="text-4xl font-bold mb-8 animate-pulse">
+                <span class="bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
+                    Schrödinger's Website<br>
+                    <span class="text-xl">(Probably 50% Cat)</span>
+                </span>
+            </h1>
+
+            <div id="message-container" class="text-lg text-gray-600 dark:text-gray-400 italic">
+                <!-- Random messages will be inserted here -->
+            </div>
+
+            <p class="text-gray-600 dark:text-gray-400">
+                This space currently exists in a quantum state of both potential and apathy. 
+                It might become a masterpiece, a dumpster fire, or just... this. 
+                Forever. <span class="inline-block animate-bounce">🤷</span>
+            </p>
+
+            <div class="mt-8 text-gray-600 dark:text-gray-400 group relative">
+                <p>If you absolutely must:</p>
+                <a href="mailto:contact@boxmaster.org" 
+                   class="underline hover:text-pink-500 transition-colors"
+                   title="We answer every 13th email for good luck">
+                    contact@boxmaster.org
+                </a>
+                <p class="text-sm mt-1">(Response time: anywhere between 3 minutes and 3 business years)</p>
+                <span class="absolute -bottom-5 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xs">
+                    Disclaimer: Email may open portal to Narnia
+                </span>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-sm text-gray-500 dark:text-gray-400 text-center pb-4 opacity-75">
+        <p class="mb-2">Meanwhile, embrace the void. It's nice here. ✨</p>
+        <div class="text-xs opacity-50">
+            <span id="particle" class="inline-block">•</span> 
+            Current existential crisis level: 
+            <span id="crisisLevel">▰▰▰▱▱ 60%</span>
+        </div>
+    </footer>
+
+    <script>
+        const messages = [
+            "This might be something brilliant. Or not. Who knows? 🤷♂️",
+            "Coming... eventually. Or not. Let's see. 🚶♂️",
+            "Don't hold your breath. But maybe keep an eye on it. 👀",
+            "Placeholder text for a placeholder life. 💭",
+            "Optimistically pessimistic since 2024. 🎉",
+            "Like watching paint dry, but more existential. 🎨",
+            "Our developers are currently arguing about snacks. 🍕",
+            "If you wait here long enough, time becomes relative. ⏳",
+            "This website is 100% content-free! 🎊",
+            "Our SSL certificate is valid. That's something, right? 🔒",
+            "Error 404: Enthusiasm Not Found ❌",
+            "Loading... (just kidding, there's nothing to load) 🌀",
+            "Pretend there's something interesting here 🎭",
+            "This space intentionally left blank 📄",
+            "We promise we're doing... something 💻"
+        ];
+
+        // Random message generator
+        document.getElementById('message-container').innerHTML = messages[Math.floor(Math.random() * messages.length)];
+
+        // Animated crisis level
+        setInterval(() => {
+            const particle = document.getElementById('particle');
+            particle.textContent = particle.textContent === '•' ? '◦' : '•';
+            
+            const levels = ['▱▱▱▱▱ 0%', '▰▱▱▱▱ 20%', '▰▰▱▱▱ 40%', 
+                          '▰▰▰▱▱ 60%', '▰▰▰▰▱ 80%', '▰▰▰▰▰ 100%'];
+            document.getElementById('crisisLevel').textContent = 
+                levels[Math.floor(Math.random() * levels.length)];
+        }, 1500);
+
+        // Console easter egg
+        console.log("%cLooking for secrets? Nice try. There's nothing here. 🕵️♂️", 
+            "color: #8B5CF6; font-size: 12px;");
+    </script>
 </body>
 </html>
