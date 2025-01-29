@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" class="dark:bg-gray-900">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features | BoxMaster 9000</title>
+    <link href="./styles/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+</head>
+
+<body class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300 font-['Inter']">
+    <nav class="bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-3 shadow-lg">
+        <div class="container mx-auto flex items-center justify-between">
+            <span class="text-xl font-bold text-white font-['Comic_Neue']">BoxMaster 9000</span>
+            <div class="hidden md:flex space-x-4">
+                <a href="/" class="nav-link text-white/90">Home</a>
+                <a href="features.html" class="nav-link text-white/90">Features</a>
+                <a href="pricing.html" class="nav-link text-white/90">Pricing</a>
+                <a href="docs.html" class="nav-link text-white/90">Docs</a>
+            </div>
+            <button class="md:hidden text-white" onclick="toggleMenu()">☰</button>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-12 max-w-6xl">
+        <h1 class="text-4xl font-bold mb-8 rainbow-text">Pricing Plans</h1>
+        
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+            <div class="pricing-card group relative overflow-hidden p-8 border-2 rounded-xl">
+                <h2 class="text-2xl font-bold mb-4">Free Plan</h2>
+                <div class="text-4xl font-bold mb-6">$0<span class="text-lg text-gray-500">/forever</span></div>
+                <ul class="space-y-3 mb-8">
+                    <li>✓ Basic existential dread</li>
+                    <li>✓ Limited disappointment</li>
+                    <li>✗ No real solutions</li>
+                </ul>
+                <button onclick="showPriceJoke()" class="magic-button w-full">
+                    Get Started
+                </button>
+            </div>
+
+            <div class="pricing-card group relative overflow-hidden p-8 border-2 border-purple-500 rounded-xl">
+                <h2 class="text-2xl font-bold mb-4">Pro Plan</h2>
+                <div class="text-4xl font-bold mb-6">$42<span class="text-lg text-gray-500">/mo</span></div>
+                <ul class="space-y-3 mb-8">
+                    <li>✓ Premium procrastination</li>
+                    <li>✓ Imaginary support</li>
+                    <li>✓ Fake progress reports</li>
+                </ul>
+                <button onclick="showPriceJoke()" class="magic-button w-full">
+                    Go Pro
+                </button>
+            </div>
+
+            <div class="pricing-card group relative overflow-hidden p-8 border-2 rounded-xl">
+                <h2 class="text-2xl font-bold mb-4">Enterprise</h2>
+                <div class="text-4xl font-bold mb-6">∞<span class="text-lg text-gray-500">/soul</span></div>
+                <ul class="space-y-3 mb-8">
+                    <li>✓ Complete reality detachment</li>
+                    <li>✓ Custom paradox engine</li>
+                    <li>✓ 24/7 imaginary support</li>
+                </ul>
+                <button onclick="showPriceJoke()" class="magic-button w-full">
+                    Contact Sales
+                </button>
+            </div>
+        </div>
+
+        <p class="text-center text-gray-500">All plans include our patented Results Simulator™ and complimentary existential crisis management</p>
+    </main>
+
+    <footer class="bg-gray-100 dark:bg-gray-800 mt-16 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2">© 2025 boxmaster.org - All promises void where prohibited</p>
+            <p class="text-xs text-gray-500">Certified ISO 9001:2008 for creative avoidance</p>
+        </div>
+    </footer>
+	
+    <script>
+        // Shared functions
+        function showPriceJoke() {
+            const jokes = [
+                "Congratulations! You've purchased nothing!",
+                "Your imaginary payment of $∞ has been processed",
+                "This button does exactly as much as our paid plans",
+                "Thank you for your pretend commitment!"
+            ];
+            alert(jokes[Math.floor(Math.random() * jokes.length)]);
+        }
+
+        // Mobile menu toggle same as features.html
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('h-screen');
+            const menu = document.querySelector('.md\\:hidden');
+            menu.classList.toggle('hidden');
+        }
+
+        // Console Easter Egg
+        console.log(`%c📦 BoxMaster 9000 Feature Loaded: Nothingness Amplifier v3.14`, 
+            "color: #8B5CF6; font-size: 16px;");
+	</script>
+</body>
+</html>

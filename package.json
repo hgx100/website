@@ -8,8 +8,8 @@
     "@tailwindcss/cli": "^4.0.0"
   },
   "scripts": {
-	"build": "npx tailwindcss -i ./input.css -o ./styles/tailwind.css --minify",
-	"watch": "npx tailwindcss -i ./input.css -o ./styles/tailwind.css --watch"
+	"build": "npx tailwindcss -i ./input.css -o ./styles/style.css --minify",
+	"watch": "npx tailwindcss -i ./input.css -o ./styles/style.css --watch"
 }
 
 }

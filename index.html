@@ -3,130 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>boxmaster.org | Strategic Digital Initiative</title>
-    <link href="./styles/tailwind.css" rel="stylesheet">
+    <title>BoxMaster 9000 | boxmaster.org</title>
+    <link href="./styles/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <script>
         if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
             document.documentElement.classList.add('dark');
         }
     </script>
 </head>
-<body class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300 font-serif">
-    <main class="container mx-auto px-4 py-12 max-w-3xl">
-        <div class="text-center border-b-2 border-gray-200 dark:border-gray-700 pb-8 mb-12">
-            <h1 class="text-3xl font-bold mb-2">
-                <span class="bg-gradient-to-r from-gray-700 to-gray-900 dark:from-gray-300 dark:to-gray-100 bg-clip-text text-transparent">
-                    Strategic Digital Presence Initiative
-                </span>
+<body class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300 font-['Inter']">
+    <!-- Navigation -->
+    <nav class="bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-3 shadow-lg">
+        <div class="container mx-auto flex items-center justify-between">
+            <span class="text-xl font-bold text-white font-['Comic_Neue']">BoxMaster 9000</span>
+            <div class="hidden md:flex space-x-4">
+                <a href="/" class="nav-link text-white/90">Home</a>
+                <a href="features.html" class="nav-link text-white/90">Features</a>
+                <a href="pricing.html" class="nav-link text-white/90">Pricing</a>
+                <a href="docs.html" class="nav-link text-white/90">Docs</a>
+            </div>
+            <button class="md:hidden text-white" onclick="toggleMenu()">☰</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12 max-w-6xl">
+        <div class="text-center mb-20">
+            <h1 class="text-5xl font-bold mb-4 animate-bounce-slow">
+                <span class="rainbow-text">The Ultimate Nothing-Box</span>
             </h1>
-            <p class="text-sm text-gray-500">Project ID: 0xDEADBEEF</p>
+            <p class="text-xl mb-8">Now with 200% more imaginary features! 🎉</p>
+            <button class="magic-button" onclick="startDemo()">
+                Activate BoxMaster 🚀
+            </button>
+            <div id="demoOutput" class="mt-4 h-24"></div>
         </div>
 
-        <section class="mb-12">
-            <h2 class="text-xl font-semibold mb-4">Project Status Overview</h2>
-            <div id="status-message" class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg mb-4">
-                <!-- Dynamic status message -->
+        <!-- Feature Cards -->
+        <div class="grid md:grid-cols-3 gap-8 mb-20">
+            <div class="feature-card p-6 border dark:border-gray-700 rounded-lg hover:transform hover:scale-105 transition-all">
+                <div class="text-4xl mb-4">📦</div>
+                <h3 class="text-xl font-bold mb-2">Quantum Box Storage</h3>
+                <p>Store infinite nothingness in our patented void containers</p>
             </div>
-            <div class="grid grid-cols-3 gap-4 text-center">
-                <div class="p-4 border dark:border-gray-700 rounded">
-                    <div class="text-2xl font-bold">∞:1</div>
-                    <div class="text-sm">Hype-to-Content Ratio</div>
-                </div>
-                <div class="p-4 border dark:border-gray-700 rounded">
-                    <div class="text-2xl font-bold">&#x221e;</div>
-                    <div class="text-sm">Projected ROI Timeline</div>
-                </div>
-                <div class="p-4 border dark:border-gray-700 rounded">
-                    <div class="text-2xl font-bold">0x00</div>
-                    <div class="text-sm">Code Commitments</div>
-                </div>
-            </div>
-        </section>
-
-        <section class="mb-12">
-            <h2 class="text-xl font-semibold mb-4">Key Performance Indicators</h2>
-            <div class="space-y-4">
-                <div class="flex items-center justify-between">
-                    <span>Existential Certainty Index</span>
-                    <span class="text-gray-500">12.7% ±40%</span>
-                </div>
-                <div class="flex items-center justify-between">
-                    <span>Motivational Vector Magnitude</span>
-                    <span class="text-gray-500">0.03&#x2198;</span>
-                </div>
-                <div class="flex items-center justify-between">
-                    <span>Creative Bankruptcy Reserve</span>
-                    <span class="text-gray-500">$∞ USD</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="mb-12">
-            <h2 class="text-xl font-semibold mb-4">Initiative Roadmap</h2>
-            <div class="space-y-2">
-                <div class="flex items-center">
-                    <div class="w-8 h-8 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center mr-4">Q1</div>
-                    <div>Conceptual Anti-Development Phase</div>
-                </div>
-                <div class="flex items-center">
-                    <div class="w-8 h-8 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center mr-4">Q2</div>
-                    <div>Strategic Non-Commitment Window</div>
-                </div>
-                <div class="flex items-center">
-                    <div class="w-8 h-8 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center mr-4">Q3</div>
-                    <div>Cross-Functional Stalling Techniques</div>
-                </div>
-            </div>
-        </section>
-
-        <section class="border-t-2 border-gray-200 dark:border-gray-700 pt-8">
-            <h3 class="text-lg font-semibold mb-4">Stakeholder Engagement Portal</h3>
-            <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-                <p class="mb-2">Designated Communication Channel:</p>
-                <a href="mailto:contact@boxmaster.org" 
-                   class="font-mono underline hover:text-gray-700 dark:hover:text-gray-100 transition-colors"
-                   title="Message bottle retrieval schedule: Tuesdays (biennial)">
-                    contact@boxmaster.org
-                </a>
-                <p class="text-xs mt-2 text-gray-500 dark:text-gray-400">
-                    * Response latency parameters: 3ms - 3.15e+10ms (estimated)
-                </p>
-            </div>
-        </section>
+            <!-- Add more feature cards -->
+        </div>
     </main>
 
-    <footer class="text-center text-sm text-gray-500 dark:text-gray-400 mt-16 pb-8">
-        <p class="mb-2">© 2024 boxmaster.org - All lack of rights reserved</p>
-        <p class="text-xs">In compliance with ISO 9001:2008 for existential ambiguity<br>
-        Void where prohibited by thermodynamics</p>
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-800 mt-16 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2">© 2025 boxmaster.org - All promises void where prohibited</p>
+            <p class="text-xs text-gray-500">Certified ISO 9001:2008 for creative avoidance</p>
+        </div>
     </footer>
 
     <script>
-        const statusMessages = [
-            "Current phase: Pre-pre-alpha conceptual limbo",
-            "Implementation pending stakeholder alignment",
-            "Core functionality: TBD (To Be Deferred)",
-            "Feature set optimized for maximum flexibility",
-            "Undergoing rigorous non-development process",
-            "Synergy pathways under virtual construction",
-            "Paradigm shift initialization sequence: 23% complete",
-            "Innovation matrix in standby mode"
-        ];
+        // Mobile Menu
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('h-screen');
+            const menu = document.querySelector('.md\\:hidden');
+            menu.classList.toggle('hidden');
+        }
 
-        // Random status message
-        document.getElementById('status-message').innerHTML = `
-            <div class="font-semibold mb-2">${statusMessages[Math.floor(Math.random() * statusMessages.length)]}</div>
-            <div class="text-sm text-gray-500">Last updated: ${new Date().toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: 'numeric'})}</div>
-        `;
+        // Main Button
+        let isAnimating = false;
+        function startDemo() {
+            if(isAnimating) return;
+            isAnimating = true;
+            
+            const output = document.getElementById('demoOutput');
+            output.innerHTML = `
+                <div class="flex items-center justify-center space-x-2 text-pink-500">
+                    <div class="animate-spin">🌀</div>
+                    <span>Compiling excuses...</span>
+                </div>
+            `;
+            
+            setTimeout(() => {
+                output.innerHTML = `
+                    <div class="rainbow-text font-bold">
+                        Success! Nothing was accomplished! 🎉
+                    </div>
+                    <div class="text-sm mt-2">Total value created: $0.00</div>
+                `;
+                isAnimating = false;
+            }, 1500);
+        }
 
-        // Console message for the curious
-        console.log(
-            "%c⚠️ Unauthorized reality distortion detected\n" +
-            "Please cease existential inquiries immediately\n" +
-            "System stability: 110%\n" +
-            "Paradox containment: ▰▰▰▰▰", 
-            "color: #4B5563; font-family: monospace;"
-        );
+        // Pricing Page Interactions
+        function showPriceJoke() {
+            const jokes = [
+                "Your payment of ∞ dollars has been processed!",
+                "Congratulations! You bought nothing!",
+                "This button is more functional than our actual product",
+                "Your soul is now ours. Terms and conditions apply."
+            ];
+            alert(jokes[Math.floor(Math.random() * jokes.length)]);
+        }
+
+        // Console Easter Egg
+        console.log(`%c⚠️ WARNING: HIGH LEVELS OF AWESOMENESS DETECTED
+%cYou seem to be a technical person! 
+Why not help us actually build something? 
+Drop us a line at contact@boxmaster.org`, 
+"color: red; font-size: 24px;", 
+"color: #4a5568; font-size: 14px;");
     </script>
 </body>
 </html>

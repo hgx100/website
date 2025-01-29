@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" class="dark:bg-gray-900">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features | BoxMaster 9000</title>
+    <link href="./styles/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300 font-['Inter']">
+    <nav class="bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-3 shadow-lg">
+        <div class="container mx-auto flex items-center justify-between">
+            <span class="text-xl font-bold text-white font-['Comic_Neue']">BoxMaster 9000</span>
+            <div class="hidden md:flex space-x-4">
+                <a href="/" class="nav-link text-white/90">Home</a>
+                <a href="features.html" class="nav-link text-white/90">Features</a>
+                <a href="pricing.html" class="nav-link text-white/90">Pricing</a>
+                <a href="docs.html" class="nav-link text-white/90">Docs</a>
+            </div>
+            <button class="md:hidden text-white" onclick="toggleMenu()">☰</button>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-12 max-w-6xl">
+        <h1 class="text-4xl font-bold mb-8 rainbow-text">Imaginary Features</h1>
+        
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="feature-card p-6 border dark:border-gray-700 rounded-lg hover:transform hover:scale-105 transition-all">
+                <div class="text-4xl mb-4 animate-bounce-slow">🕳️</div>
+                <h3 class="text-xl font-bold mb-2">Quantum Void Storage</h3>
+                <p class="text-gray-600 dark:text-gray-400">Store literally nothing in our patented emptiness containers</p>
+            </div>
+            
+            <div class="feature-card p-6 border dark:border-gray-700 rounded-lg hover:transform hover:scale-105 transition-all">
+                <div class="text-4xl mb-4 animate-spin-slow">🌀</div>
+                <h3 class="text-xl font-bold mb-2">AI-Powered Nothingness</h3>
+                <p class="text-gray-600 dark:text-gray-400">Machine learning algorithms that learn to do nothing faster</p>
+            </div>
+            
+            <div class="feature-card p-6 border dark:border-gray-700 rounded-lg hover:transform hover:scale-105 transition-all">
+                <div class="text-4xl mb-4 animate-pulse">📭</div>
+                <h3 class="text-xl font-bold mb-2">Infinite Email Blackhole</h3>
+                <p class="text-gray-600 dark:text-gray-400">Messages disappear into the void (we never read them)</p>
+            </div>
+            
+            <div class="feature-card p-6 border dark:border-gray-700 rounded-lg hover:transform hover:scale-105 transition-all">
+                <div class="text-4xl mb-4">🤷</div>
+                <h3 class="text-xl font-bold mb-2">Advanced Shrug Technology</h3>
+                <p class="text-gray-600 dark:text-gray-400">Proprietary "meh" algorithms for maximum apathy</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-100 dark:bg-gray-800 mt-16 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2">© 2025 boxmaster.org - All promises void where prohibited</p>
+            <p class="text-xs text-gray-500">Certified ISO 9001:2008 for creative avoidance</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('h-screen');
+            const menu = document.querySelector('.md\\:hidden');
+            menu.classList.toggle('hidden');
+        }
+
+        // Console Easter Egg
+        console.log(`%c📦 BoxMaster 9000 Feature Loaded: Nothingness Amplifier v3.14`, 
+            "color: #8B5CF6; font-size: 16px;");
+    </script>
+</body>
+</html>

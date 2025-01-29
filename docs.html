@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" class="dark:bg-gray-900">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features | BoxMaster 9000</title>
+    <link href="./styles/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+</head>
+
+<body class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300 font-['Inter']">
+    <nav class="bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-3 shadow-lg">
+        <div class="container mx-auto flex items-center justify-between">
+            <span class="text-xl font-bold text-white font-['Comic_Neue']">BoxMaster 9000</span>
+            <div class="hidden md:flex space-x-4">
+                <a href="/" class="nav-link text-white/90">Home</a>
+                <a href="features.html" class="nav-link text-white/90">Features</a>
+                <a href="pricing.html" class="nav-link text-white/90">Pricing</a>
+                <a href="docs.html" class="nav-link text-white/90">Docs</a>
+            </div>
+            <button class="md:hidden text-white" onclick="toggleMenu()">☰</button>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-12 max-w-6xl">
+        <h1 class="text-4xl font-bold mb-8 rainbow-text">Technical Documentation</h1>
+        
+        <div class="grid md:grid-cols-4 gap-8">
+            <div class="md:col-span-1">
+                <nav class="space-y-2 sticky top-4">
+                    <a href="#overview" class="block p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded">Overview</a>
+                    <a href="#api" class="block p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded">API Reference</a>
+                    <a href="#faq" class="block p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded">FAQ</a>
+                </nav>
+            </div>
+
+            <div class="md:col-span-3 space-y-12">
+                <section id="overview">
+                    <h2 class="text-2xl font-bold mb-4">System Architecture</h2>
+                    <pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded">
+    [ Nothingness Core ]
+          │
+          ▼
+    [ Quantum Void Engine ]
+          │
+          ▼
+    [ Placeholder Module ]
+                    </pre>
+                </section>
+
+                <section id="api">
+                    <h2 class="text-2xl font-bold mb-4">API Endpoints</h2>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-gray-100 dark:bg-gray-800 rounded">
+                            <code class="block mb-2">POST /api/pretendToWork</code>
+                            <p>Simulates productive activity without actual results</p>
+                        </div>
+                        <div class="p-4 bg-gray-100 dark:bg-gray-800 rounded">
+                            <code class="block mb-2">GET /api/randomExcuse</code>
+                            <p>Returns a randomly generated development delay explanation</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="faq">
+                    <h2 class="text-2xl font-bold mb-4">Frequently Avoided Questions</h2>
+                    <div class="space-y-4">
+                        <div class="p-4 border dark:border-gray-700 rounded">
+                            <h3 class="font-bold mb-2">Q: When will this actually do something?</h3>
+                            <p>A: We're targeting Q3 2035 for our first non-feature</p>
+                        </div>
+                        <div class="p-4 border dark:border-gray-700 rounded">
+                            <h3 class="font-bold mb-2">Q: Is this a real product?</h3>
+                            <p>A: Define "real"</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-100 dark:bg-gray-800 mt-16 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2">© 2025 boxmaster.org - All promises void where prohibited</p>
+            <p class="text-xs text-gray-500">Certified ISO 9001:2008 for creative avoidance</p>
+        </div>
+    </footer>
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('h-screen');
+            const menu = document.querySelector('.md\\:hidden');
+            menu.classList.toggle('hidden');
+        }
+
+        // Console Easter Egg
+        console.log(`%c📦 BoxMaster 9000 Feature Loaded: Nothingness Amplifier v3.14`, 
+            "color: #8B5CF6; font-size: 16px;");
+	</script>
+</body>
+</html>
