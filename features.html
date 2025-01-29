@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" class="dark:bg-gray-900">
 <head>
+	<!-- Social Media Meta Tags -->
+	<meta property="og:title" content="BoxMaster 9000 | Professional Nothingness Solutions">
+	<meta property="og:description" content="The ultimate solution for all your imaginary needs. Featuring quantum void storage and AI-powered apathy.">
+	<meta property="og:image" content="https://boxmaster.org/preview-image.jpg">
+	<meta property="og:url" content="https://www.boxmaster.org">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="BoxMaster 9000 | Professional Nothingness Solutions">
+	<meta name="twitter:description" content="The ultimate solution for all your imaginary needs. Featuring quantum void storage and AI-powered apathy.">
+	<meta name="twitter:image" content="https://boxmaster.org/preview-image.jpg">
+	
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Features | BoxMaster 9000</title>
+    <title>BoxMaster 9000 | boxmaster.org</title>
     <link href="./styles/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <script>
@@ -13,18 +23,35 @@
     </script>
 </head>
 <body class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300 font-['Inter']">
-    <nav class="bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-3 shadow-lg">
-        <div class="container mx-auto flex items-center justify-between">
-            <span class="text-xl font-bold text-white font-['Comic_Neue']">BoxMaster 9000</span>
-            <div class="hidden md:flex space-x-4">
-                <a href="/" class="nav-link text-white/90">Home</a>
-                <a href="features.html" class="nav-link text-white/90">Features</a>
-                <a href="pricing.html" class="nav-link text-white/90">Pricing</a>
-                <a href="docs.html" class="nav-link text-white/90">Docs</a>
-            </div>
-            <button class="md:hidden text-white" onclick="toggleMenu()">☰</button>
-        </div>
-    </nav>
+	<nav class="bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-3 shadow-lg relative">
+		<div class="container mx-auto flex items-center justify-between">
+			<span class="text-xl font-bold text-white font-['Comic_Neue']">BoxMaster 9000</span>
+			
+			<!-- Desktop Menu -->
+			<div class="hidden md:flex space-x-4">
+				<a href="/" class="nav-link text-white/90">Home</a>
+				<a href="features.html" class="nav-link text-white/90">Features</a>
+				<a href="pricing.html" class="nav-link text-white/90">Pricing</a>
+				<a href="docs.html" class="nav-link text-white/90">Docs</a>
+			</div>
+			
+			<!-- Mobile Menu Button -->
+			<button class="md:hidden text-white" onclick="toggleMenu()">
+				<span id="menuIcon">☰</span>
+			</button>
+		</div>
+
+		<!-- Mobile Menu Dropdown -->
+		<div id="mobileMenu" class="md:hidden absolute top-full left-0 right-0 bg-gradient-to-r from-purple-600 to-pink-600 hidden">
+			<div class="container mx-auto px-4 py-4 space-y-3">
+				<a href="/" class="block text-white/90 hover:text-white">Home</a>
+				<a href="features.html" class="block text-white/90 hover:text-white">Features</a>
+				<a href="pricing.html" class="block text-white/90 hover:text-white">Pricing</a>
+				<a href="docs.html" class="block text-white/90 hover:text-white">Docs</a>
+			</div>
+		</div>
+	</nav>
+
 
     <main class="container mx-auto px-4 py-12 max-w-6xl">
         <h1 class="text-4xl font-bold mb-8 rainbow-text">Imaginary Features</h1>
@@ -65,13 +92,16 @@
 
     <script>
         // Mobile Menu Toggle
-        function toggleMenu() {
-            const nav = document.querySelector('nav');
-            nav.classList.toggle('h-screen');
-            const menu = document.querySelector('.md\\:hidden');
-            menu.classList.toggle('hidden');
-        }
-
+		function toggleMenu() {
+			const menu = document.getElementById('mobileMenu');
+			const isOpen = menu.getAttribute('aria-hidden') === 'false';
+			menu.setAttribute('aria-hidden', !isOpen);
+			menu.style.display = isOpen ? 'none' : 'block';
+			
+			// Animate menu icon
+			const icon = document.getElementById('menuIcon');
+			icon.textContent = isOpen ? '☰' : '×';
+		}
         // Console Easter Egg
         console.log(`%c📦 BoxMaster 9000 Feature Loaded: Nothingness Amplifier v3.14`, 
             "color: #8B5CF6; font-size: 16px;");

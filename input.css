@@ -28,3 +28,21 @@
   50% { background-position: 100% 50% }
   100% { background-position: 0% 50% }
 }
+
+#mobileMenu {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform-origin: top;
+    z-index: 50;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+#mobileMenu[aria-hidden="false"] {
+    display: block;
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+#mobileMenu[aria-hidden="true"] {
+    opacity: 0;
+    transform: scaleY(0.95);
+}
