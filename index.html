@@ -1,147 +1,430 @@
 <!DOCTYPE html>
-<html lang="en" class="dark:bg-gray-900">
+<html lang="en">
 <head>
-	<!-- Social Media Meta Tags -->
-	<meta property="og:title" content="BoxMaster 9000 | Professional Nothingness Solutions">
-	<meta property="og:description" content="The ultimate solution for all your imaginary needs. Featuring quantum void storage and AI-powered apathy.">
-	<meta property="og:image" content="https://boxmaster.org/preview-image.jpg">
-	<meta property="og:url" content="https://www.boxmaster.org">
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="BoxMaster 9000 | Professional Nothingness Solutions">
-	<meta name="twitter:description" content="The ultimate solution for all your imaginary needs. Featuring quantum void storage and AI-powered apathy.">
-	<meta name="twitter:image" content="https://boxmaster.org/preview-image.jpg">
-	
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BoxMaster 9000 | boxmaster.org</title>
-    <link href="./styles/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <script>
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.documentElement.classList.add('dark');
-        }
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BoxMaster | Next-Gen Data Orchestration</title>
+  <meta name="description" content="BoxMaster is a flexible platform for creating, managing, and automating custom data warehouses with deep schema customization, robust API integrations, and powerful automation triggers." />
+  <link rel="icon" href="favicon.ico" />
+  <!-- Tailwind CSS -->
+  <link href="./style/style.css" rel="stylesheet" />
+  <!-- AOS CSS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    /* Smooth scrolling for all anchor links */
+    html {
+      scroll-behavior: smooth;
+    }
+    /* Simple fade-in animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeIn {
+      animation: fadeIn 1s ease-out forwards;
+    }
+    /* Standard glassmorphism styling */
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+    }
+    /* Vibrant gradient for cards */
+    .gradient-card {
+      background: linear-gradient(135deg, #7F00FF, #E100FF);
+    }
+    /* Hero section background with richer gradient */
+    .bg-hero {
+      background: linear-gradient(135deg, #1E3A8A, #7F00FF);
+    }
+    /* Custom style for the sneak peek card – darker, reverse gradient & extra glass */
+    .sneak-peek {
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+    }
+    /* Unique continuous glow animation for the sneak peek card */
+    @keyframes cardGlow {
+      0% { box-shadow: 0 0 10px rgba(255,255,255,0.2); }
+      50% { box-shadow: 0 0 20px rgba(255,255,255,0.6); }
+      100% { box-shadow: 0 0 10px rgba(255,255,255,0.2); }
+    }
+    .animate-cardGlow {
+      animation: cardGlow 3s ease-in-out infinite;
+    }
+    /* AOS elements initially hidden */
+    [data-aos] {
+      opacity: 0;
+      transition-property: opacity, transform;
+    }
+    /* For users preferring reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      [data-aos] {
+        transition: none;
+      }
+    }
+  </style>
 </head>
-<body class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300 font-['Inter']">
-    <!-- Navigation -->
-	<nav class="bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-3 shadow-lg relative">
-		<div class="container mx-auto flex items-center justify-between">
-			<span class="text-xl font-bold text-white font-['Comic_Neue']">BoxMaster 9000</span>
-			
-			<!-- Desktop Menu -->
-			<div class="hidden md:flex space-x-4">
-				<a href="/" class="nav-link text-white/90">Home</a>
-				<a href="features.html" class="nav-link text-white/90">Features</a>
-				<a href="pricing.html" class="nav-link text-white/90">Pricing</a>
-				<a href="docs.html" class="nav-link text-white/90">Docs</a>
-			</div>
-			
-			<!-- Mobile Menu Button -->
-			<button class="md:hidden text-white" onclick="toggleMenu()">
-				<span id="menuIcon">☰</span>
-			</button>
-		</div>
-
-		<!-- Mobile Menu Dropdown -->
-		<div id="mobileMenu" class="md:hidden absolute top-full left-0 right-0 bg-gradient-to-r from-purple-600 to-pink-600 hidden">
-			<div class="container mx-auto px-4 py-4 space-y-3">
-				<a href="/" class="block text-white/90 hover:text-white">Home</a>
-				<a href="features.html" class="block text-white/90 hover:text-white">Features</a>
-				<a href="pricing.html" class="block text-white/90 hover:text-white">Pricing</a>
-				<a href="docs.html" class="block text-white/90 hover:text-white">Docs</a>
-			</div>
-		</div>
-	</nav>
-
-
-    <!-- Main Content -->
-    <main class="container mx-auto px-4 py-12 max-w-6xl">
-        <div class="text-center mb-20">
-            <h1 class="text-5xl font-bold mb-4 animate-bounce-slow">
-                <span class="rainbow-text">The Ultimate Nothing-Box</span>
-            </h1>
-            <p class="text-xl mb-8">Now with 200% more imaginary features! 🎉</p>
-            <button class="magic-button" onclick="startDemo()">
-                Activate BoxMaster 🚀
-            </button>
-            <div id="demoOutput" class="mt-4 h-24"></div>
+<body class="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-gray-100">
+  <!-- Navigation -->
+  <nav class="fixed w-full z-50 backdrop-blur-xl border-b border-white/10">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center">
+          <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
+          </svg>
         </div>
+        <span class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+          BoxMaster
+        </span>
+      </div>
+      <div class="hidden md:flex items-center gap-6">
+        <a href="#hero" class="text-gray-300 hover:text-white transition-colors">Home</a>
+        <a href="#about" class="text-gray-300 hover:text-white transition-colors">About</a>
+        <a href="#features" class="text-gray-300 hover:text-white transition-colors">Features</a>
+        <a href="#use-cases" class="text-gray-300 hover:text-white transition-colors">Use Cases</a>
+        <a href="#roadmap" class="text-gray-300 hover:text-white transition-colors">Roadmap</a>
+        <a href="#faq" class="text-gray-300 hover:text-white transition-colors">FAQ</a>
+        <a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-        <!-- Feature Cards -->
-        <div class="grid md:grid-cols-3 gap-8 mb-20">
-            <div class="feature-card p-6 border dark:border-gray-700 rounded-lg hover:transform hover:scale-105 transition-all">
-                <div class="text-4xl mb-4">📦</div>
-                <h3 class="text-xl font-bold mb-2">Quantum Box Storage</h3>
-                <p>Store infinite nothingness in our patented void containers</p>
+  <!-- Hero Section -->
+  <section id="hero" class="min-h-screen pt-32 pb-20 relative overflow-hidden bg-hero">
+    <div class="container mx-auto px-6">
+      <div class="max-w-4xl" data-aos="fade-up">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <span class="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Reinventing Data Management</span><br>
+          <span class="text-purple-400">Empowering Custom Data Warehouses</span>
+        </h1>
+        <p class="text-xl text-gray-300 mb-12 max-w-3xl">
+          Enterprise-grade solution for organizing, versioning, and collaborating on complex data workflows.
+          Designed for developers, researchers, and creative teams.
+        </p>
+        <div class="flex gap-4">
+          <a href="#features" class="px-8 py-4 bg-purple-600 hover:bg-purple-700 rounded-xl text-white transition-colors shadow-lg shadow-purple-500/30" data-aos="fade-right">
+            Explore Features
+          </a>
+          <a href="#about" class="px-8 py-4 bg-white/5 hover:bg-white/10 rounded-xl text-white transition-colors" data-aos="fade-left">
+            Learn More
+          </a>
+        </div>
+        <!-- Sneak Peek Card (moved into Hero) -->
+        <div class="mt-12" data-aos="zoom-in" data-aos-delay="300">
+          <div class="relative max-w-4xl mx-auto sneak-peek rounded-2xl p-8 shadow-2xl border border-white/10 animate-cardGlow hover:scale-105 transition-transform duration-300">
+            <div class="text-center">
+              <h2 class="text-3xl font-bold mb-4">Sneak Peek: A Vision for Tomorrow</h2>
+              <p class="text-lg text-gray-300">
+                BoxMaster is in its embryonic phase and won’t be available to the public for at least 2–3 years.
+                We’re meticulously crafting a revolutionary platform for custom data warehouses.
+                Patience, dear visitor – greatness takes time!
+              </p>
             </div>
-            <!-- Add more feature cards -->
+          </div>
         </div>
-    </main>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-100 dark:bg-gray-800 mt-16 py-8">
-        <div class="container mx-auto px-4 text-center">
-            <p class="mb-2">© 2025 boxmaster.org - All promises void where prohibited</p>
-            <p class="text-xs text-gray-500">Certified ISO 9001:2008 for creative avoidance</p>
+  <!-- About Section -->
+<section id="about" class="py-20">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <h2 class="text-4xl font-bold text-transparent bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text">
+        About BoxMaster
+      </h2>
+      <p class="text-xl text-gray-300 mt-4">
+        BoxMaster is a revolutionary platform for dynamic data orchestration and automation.
+        Create and manage custom data warehouses—with deep schema customization, robust API integrations, and powerful automation triggers.
+      </p>
+    </div>
+    <!-- Notice the items-stretch class here -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+      <!-- Card 1 -->
+      <div data-aos="fade-up" data-aos-delay="100" class="w-full min-h-[250px]">
+        <div class="p-6 gradient-card glass hover:scale-105 transition-transform duration-200 flex flex-col h-full">
+          <div class="text-4xl mb-2">🛠️</div>
+          <h3 class="text-2xl font-semibold mb-2">Customizable</h3>
+          <p class="text-gray-200">
+            Define your own data schema with custom fields, types, and validations tailored to your projects.
+          </p>
         </div>
-    </footer>
+      </div>
+      <!-- Card 2 -->
+      <div data-aos="fade-up" data-aos-delay="200" class="w-full min-h-[250px]">
+        <div class="p-6 gradient-card glass hover:scale-105 transition-transform duration-200 flex flex-col h-full">
+          <div class="text-4xl mb-2">⚙️</div>
+          <h3 class="text-2xl font-semibold mb-2">Automated</h3>
+          <p class="text-gray-200">
+            Automate processes with triggers, webhooks, and cron jobs to streamline your workflow.
+          </p>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div data-aos="fade-up" data-aos-delay="300" class="w-full min-h-[250px]">
+        <div class="p-6 gradient-card glass hover:scale-105 transition-transform duration-200 flex flex-col h-full">
+          <div class="text-4xl mb-2">🔌</div>
+          <h3 class="text-2xl font-semibold mb-2">Integrated</h3>
+          <p class="text-gray-200">
+            Connect seamlessly with APIs, CLI tools, and community plugins for extended functionality.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script>
-        // Mobile Menu
-		function toggleMenu() {
-			const menu = document.getElementById('mobileMenu');
-			const isOpen = menu.getAttribute('aria-hidden') === 'false';
-			menu.setAttribute('aria-hidden', !isOpen);
-			menu.style.display = isOpen ? 'none' : 'block';
-			
-			// Animate menu icon
-			const icon = document.getElementById('menuIcon');
-			icon.textContent = isOpen ? '☰' : '×';
-		}
+  <!-- Features Section -->
+  <section id="features" class="py-20 bg-black/30">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <h2 class="text-4xl font-bold text-transparent bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text">Features That Inspire</h2>
+      </div>
+      <div class="space-y-12">
+        <!-- Feature 1 -->
+        <div class="flex flex-col md:flex-row items-center gap-8" data-aos="fade-up">
+          <div class="md:w-1/2 flex justify-center text-6xl">
+            <span>📦</span>
+          </div>
+          <div class="md:w-1/2">
+            <h3 class="text-3xl font-bold mb-4">Dynamic Boxes</h3>
+            <p class="text-lg mb-4 text-gray-300">
+              Build custom data containers with fields tailored to your project—from detailed metadata to critical system logs.
+            </p>
+            <a href="#roadmap" class="inline-block px-6 py-3 bg-purple-600 text-white rounded-full shadow hover:bg-purple-700 transition-colors">
+              Get Started
+            </a>
+          </div>
+        </div>
+        <!-- Feature 2 -->
+        <div class="flex flex-col md:flex-row items-center gap-8" data-aos="fade-up" data-aos-delay="100">
+          <div class="md:w-1/2 order-2 md:order-1">
+            <h3 class="text-3xl font-bold mb-4">Seamless Automation</h3>
+            <p class="text-lg mb-4 text-gray-300">
+              Automate your workflow with integrated webhooks, cron jobs, and custom plugins that work around the clock.
+            </p>
+            <a href="#roadmap" class="inline-block px-6 py-3 bg-purple-600 text-white rounded-full shadow hover:bg-purple-700 transition-colors">
+              Learn More
+            </a>
+          </div>
+          <div class="md:w-1/2 order-1 md:order-2 flex justify-center text-6xl">
+            <span>💻</span>
+          </div>
+        </div>
+        <!-- Feature 3 -->
+        <div class="flex flex-col md:flex-row items-center gap-8" data-aos="fade-up" data-aos-delay="200">
+          <div class="md:w-1/2 flex justify-center text-6xl">
+            <span>🔍</span>
+          </div>
+          <div class="md:w-1/2">
+            <h3 class="text-3xl font-bold mb-4">Smart Search</h3>
+            <p class="text-lg mb-4 text-gray-300">
+              Utilize advanced filtering and search to quickly locate exactly what you need within your boxes.
+            </p>
+            <a href="#roadmap" class="inline-block px-6 py-3 bg-purple-600 text-white rounded-full shadow hover:bg-purple-700 transition-colors">
+              Explore Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        // Main Button
-        let isAnimating = false;
-        function startDemo() {
-            if(isAnimating) return;
-            isAnimating = true;
-            
-            const output = document.getElementById('demoOutput');
-            output.innerHTML = `
-                <div class="flex items-center justify-center space-x-2 text-pink-500">
-                    <div class="animate-spin">🌀</div>
-                    <span>Compiling excuses...</span>
-                </div>
-            `;
-            
-            setTimeout(() => {
-                output.innerHTML = `
-                    <div class="rainbow-text font-bold">
-                        Success! Nothing was accomplished! 🎉
-                    </div>
-                    <div class="text-sm mt-2">Total value created: $0.00</div>
-                `;
-                isAnimating = false;
-            }, 1500);
-        }
+  <!-- Use Cases Section -->
+  <section id="use-cases" class="py-20">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <h2 class="text-4xl font-bold text-transparent bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text">Use Cases</h2>
+        <p class="text-xl text-gray-300 mt-4">Real-world scenarios where BoxMaster transforms data management.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Use Case Card 1: For Developers -->
+        <div data-aos="fade-up" data-aos-delay="100" class="w-full min-h-[250px]">
+          <div class="p-6 gradient-card glass hover:scale-105 transition-transform duration-200 flex flex-col h-full">
+            <div class="text-4xl mb-2">💻</div>
+            <h3 class="text-2xl font-semibold mb-2">For Developers</h3>
+            <p class="text-gray-200">Leverage our RESTful API and CLI tools to automate workflows and supercharge your development process.</p>
+          </div>
+        </div>
+        <!-- Use Case Card 2: For Researchers -->
+        <div data-aos="fade-up" data-aos-delay="200" class="w-full min-h-[250px]">
+          <div class="p-6 gradient-card glass hover:scale-105 transition-transform duration-200 flex flex-col h-full">
+            <div class="text-4xl mb-2">🔬</div>
+            <h3 class="text-2xl font-semibold mb-2">For Researchers</h3>
+            <p class="text-gray-200">Analyze, filter, and manage experimental data with advanced search and filtering capabilities.</p>
+          </div>
+        </div>
+        <!-- Use Case Card 3: For Creative Teams -->
+        <div data-aos="fade-up" data-aos-delay="300" class="w-full min-h-[250px]">
+          <div class="p-6 gradient-card glass hover:scale-105 transition-transform duration-200 flex flex-col h-full">
+            <div class="text-4xl mb-2">🎨</div>
+            <h3 class="text-2xl font-semibold mb-2">For Creative Teams</h3>
+            <p class="text-gray-200">Organize digital assets, track metadata, and collaborate seamlessly on your creative projects.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        // Pricing Page Interactions
-        function showPriceJoke() {
-            const jokes = [
-                "Your payment of ∞ dollars has been processed!",
-                "Congratulations! You bought nothing!",
-                "This button is more functional than our actual product",
-                "Your soul is now ours. Terms and conditions apply."
-            ];
-            alert(jokes[Math.floor(Math.random() * jokes.length)]);
-        }
+  <!-- Roadmap Section -->
+  <section id="roadmap" class="py-20">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <h2 class="text-4xl font-bold text-transparent bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text">Our Roadmap</h2>
+        <p class="text-xl text-gray-300 mt-4">
+          Our journey to revolutionize data management is divided into clear, strategic phases.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Roadmap Card 1 -->
+        <div data-aos="fade-up" data-aos-delay="100" class="w-full min-h-[250px]">
+          <div class="p-6 glass gradient-card hover:scale-105 transition-transform duration-200 flex flex-col h-full">
+            <h3 class="text-2xl font-bold text-white mb-2">Phase 1: Core Platform Launch</h3>
+            <ul class="list-disc list-inside text-white">
+              <li>Customizable boxes &amp; schema editor</li>
+              <li>CRUD API for data management</li>
+              <li>Responsive web interface</li>
+            </ul>
+          </div>
+        </div>
 
-        // Console Easter Egg
-        console.log(`%c⚠️ WARNING: HIGH LEVELS OF AWESOMENESS DETECTED
-%cYou seem to be a technical person! 
-Why not help us actually build something? 
-Drop us a line at contact@boxmaster.org`, 
-"color: red; font-size: 24px;", 
-"color: #4a5568; font-size: 14px;");
-    </script>
+        <!-- Roadmap Card 2 -->
+        <div data-aos="fade-up" data-aos-delay="200" class="w-full min-h-[250px]">
+          <div class="p-6 glass gradient-card hover:scale-105 transition-transform duration-200 flex flex-col h-full">
+            <h3 class="text-2xl font-bold text-white mb-2">Phase 2: Integration &amp; Automation</h3>
+            <ul class="list-disc list-inside text-white">
+              <li>Webhook &amp; cron job automation</li>
+              <li>CLI utility for streamlined operations</li>
+              <li>Enhanced API integrations</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Roadmap Card 3 -->
+        <div data-aos="fade-up" data-aos-delay="300" class="w-full min-h-[250px]">
+          <div class="p-6 glass gradient-card hover:scale-105 transition-transform duration-200 flex flex-col h-full">
+            <h3 class="text-2xl font-bold text-white mb-2">Phase 3: Collaboration &amp; Expansion</h3>
+            <ul class="list-disc list-inside text-white">
+              <li>Public/private boxes with granular access control</li>
+              <li>Versioning &amp; audit trails</li>
+              <li>Community plugins and extended integrations</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-20">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <h2 class="text-4xl font-bold text-transparent bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text">Frequently Asked Questions</h2>
+      </div>
+      <div class="space-y-4">
+        <details class="p-4 border border-white/10 rounded-lg" data-aos="fade-up">
+          <summary class="text-xl font-semibold cursor-pointer">What exactly is BoxMaster?</summary>
+          <p class="mt-2 text-gray-300">
+            BoxMaster is a platform for creating, managing, and automating custom data warehouses with deep schema customization and robust API integrations.
+          </p>
+        </details>
+        <details class="p-4 border border-white/10 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+          <summary class="text-xl font-semibold cursor-pointer">When will it be available?</summary>
+          <p class="mt-2 text-gray-300">
+            We're in the early stages. Best-case scenario, you might see it in 2–3 years. Until then, consider it a work in progress.
+          </p>
+        </details>
+        <details class="p-4 border border-white/10 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+          <summary class="text-xl font-semibold cursor-pointer">Can I try it out now?</summary>
+          <p class="mt-2 text-gray-300">
+            Not just yet. We're still gathering ideas and laying the groundwork. Stay tuned for updates!
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+<!-- Contact Section (Static, with Mailto Link) -->
+<section id="contact" class="py-20">
+  <div class="container mx-auto px-6 max-w-2xl">
+    <div class="glass rounded-2xl p-8 border border-white/10" data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-8 text-center">Contact Us (Carrier Pigeon Not Required)</h2>
+      <p class="text-center text-gray-300 mb-6">
+        Got questions? A million-dollar investment offer? A bug report about a product that doesn’t exist yet?  
+        <br><br>
+        Whatever it is, we’d love to hear from you! Just click the button below and send us an email like it’s 1999.
+      </p>
+      <div class="text-center">
+        <a href="mailto:contact@boxmaster.org" class="inline-block px-6 py-4 bg-purple-600 hover:bg-purple-700 rounded-lg text-white transition-colors font-medium">
+          Send a Wild Email
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="border-t border-white/10">
+  <div class="container mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center">
+    <span class="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">BoxMaster</span>
+    <div class="flex gap-8 mt-4 md:mt-0">
+      <a href="mailto:contact@boxmaster.org" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+      <a href="#" onclick="showPrivacy(); return false;" class="text-gray-400 hover:text-white transition-colors">Privacy</a>
+      <a href="#" onclick="showTerms(); return false;" class="text-gray-400 hover:text-white transition-colors">Terms</a>
+      
+    </div>
+  </div>
+</footer>
+
+<!-- Hidden Modal for Easter Egg -->
+<div id="easter-egg-modal" class="hidden fixed inset-0 bg-black/50 backdrop-blur-md flex justify-center items-center">
+  <div class="bg-gray-900 p-6 rounded-lg shadow-lg max-w-lg text-center">
+    <h3 id="easter-egg-title" class="text-xl font-bold text-purple-400"></h3>
+    <p id="easter-egg-content" class="text-gray-300 mt-4"></p>
+    <button onclick="hideEasterEgg()" class="mt-6 px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg text-white transition-colors">
+      Got It
+    </button>
+  </div>
+</div>
+
+<script>
+  function showPrivacy() {
+    document.getElementById("easter-egg-title").innerText = "Privacy Policy (Kinda)";
+    document.getElementById("easter-egg-content").innerText = 
+      "We deeply respect your privacy. That’s why we collect absolutely nothing. Seriously, we don’t even have a database yet.";
+    document.getElementById("easter-egg-modal").classList.remove("hidden");
+  }
+
+  function showTerms() {
+    document.getElementById("easter-egg-title").innerText = "Terms & Conditions";
+    document.getElementById("easter-egg-content").innerText = 
+      "By using this website, you agree to: 1) Not sue us for delays. 2) Not expect an actual product anytime soon. 3) Send us a cool meme if you find this.";
+    document.getElementById("easter-egg-modal").classList.remove("hidden");
+  }
+
+  function hideEasterEgg() {
+    document.getElementById("easter-egg-modal").classList.add("hidden");
+  }
+</script>
+
+
+  <!-- AOS Animation Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: 'ease-out-quart'
+    });
+    
+  </script>
 </body>
 </html>
