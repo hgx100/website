@@ -351,70 +351,67 @@
     </div>
   </section>
 
-<!-- Contact Section (Static, with Mailto Link) -->
-<section id="contact" class="py-20">
-  <div class="container mx-auto px-6 max-w-2xl">
-    <div class="glass rounded-2xl p-8 border border-white/10" data-aos="fade-up">
-      <h2 class="text-3xl font-bold mb-8 text-center">Contact Us (Carrier Pigeon Not Required)</h2>
-      <p class="text-center text-gray-300 mb-6">
-        Got questions? A million-dollar investment offer? A bug report about a product that doesn’t exist yet?  
-        <br><br>
-        Whatever it is, we’d love to hear from you! Just click the button below and send us an email like it’s 1999.
-      </p>
-      <div class="text-center">
-        <a href="mailto:contact@boxmaster.org" class="inline-block px-6 py-4 bg-purple-600 hover:bg-purple-700 rounded-lg text-white transition-colors font-medium">
-          Send a Wild Email
-        </a>
+  <!-- Contact Section (Static, with Mailto Link) -->
+  <section id="contact" class="py-20">
+    <div class="container mx-auto px-6 max-w-2xl">
+      <div class="glass rounded-2xl p-8 border border-white/10" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-8 text-center">Contact Us (Carrier Pigeon Not Required)</h2>
+        <p class="text-center text-gray-300 mb-6">
+          Got questions? A million-dollar investment offer? A bug report about a product that doesn’t exist yet?  
+          <br><br>
+          Whatever it is, we’d love to hear from you! Just click the button below and send us an email like it’s 1999.
+        </p>
+        <div class="text-center">
+          <a href="mailto:contact@boxmaster.org" class="inline-block px-6 py-4 bg-purple-600 hover:bg-purple-700 rounded-lg text-white transition-colors font-medium">
+            Send a Wild Email
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- Footer -->
+  <footer class="border-t border-white/10">
+    <div class="container mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center">
+      <span class="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">BoxMaster</span>
+      <div class="flex gap-8 mt-4 md:mt-0">
+        <a href="mailto:contact@boxmaster.org" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+        <a href="#" onclick="showInfo('privacy'); return false;" class="text-gray-400 hover:text-white transition-colors">Privacy</a>
+        <a href="#" onclick="showInfo('terms'); return false;" class="text-gray-400 hover:text-white transition-colors">Terms</a>
+      </div>
+    </div>
+  </footer>
 
-<!-- Footer -->
-<footer class="border-t border-white/10">
-  <div class="container mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center">
-    <span class="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">BoxMaster</span>
-    <div class="flex gap-8 mt-4 md:mt-0">
-      <a href="mailto:contact@boxmaster.org" class="text-gray-400 hover:text-white transition-colors">Contact</a>
-      <a href="#" onclick="showPrivacy(); return false;" class="text-gray-400 hover:text-white transition-colors">Privacy</a>
-      <a href="#" onclick="showTerms(); return false;" class="text-gray-400 hover:text-white transition-colors">Terms</a>
-      
+  <!-- Hidden Modal for Additional Info (Disguised Easter Egg) -->
+  <div id="infoModal" class="hidden fixed inset-0 bg-black/50 backdrop-blur-md flex justify-center items-center">
+    <div class="bg-gray-900 p-6 rounded-lg shadow-lg max-w-lg text-center">
+      <h3 id="infoTitle" class="text-xl font-bold text-purple-400"></h3>
+      <p id="infoContent" class="text-gray-300 mt-4"></p>
+      <button onclick="hideInfo()" class="mt-6 px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg text-white transition-colors">
+        Got It
+      </button>
     </div>
   </div>
-</footer>
 
-<!-- Hidden Modal for Easter Egg -->
-<div id="easter-egg-modal" class="hidden fixed inset-0 bg-black/50 backdrop-blur-md flex justify-center items-center">
-  <div class="bg-gray-900 p-6 rounded-lg shadow-lg max-w-lg text-center">
-    <h3 id="easter-egg-title" class="text-xl font-bold text-purple-400"></h3>
-    <p id="easter-egg-content" class="text-gray-300 mt-4"></p>
-    <button onclick="hideEasterEgg()" class="mt-6 px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg text-white transition-colors">
-      Got It
-    </button>
-  </div>
-</div>
+  <script>
+    // Generic info modal functions to "disguise" the easter egg.
+    function showInfo(type) {
+      if (type === 'privacy') {
+        document.getElementById("infoTitle").innerText = "Privacy Policy (Kinda)";
+        document.getElementById("infoContent").innerText = 
+          "We deeply respect your privacy. That’s why we collect absolutely nothing. Seriously, we don’t even have a database yet.";
+      } else if (type === 'terms') {
+        document.getElementById("infoTitle").innerText = "Terms & Conditions";
+        document.getElementById("infoContent").innerText = 
+          "By using this website, you agree to: 1) Not sue us for delays. 2) Not expect an actual product anytime soon. 3) Send us a cool meme if you find this.";
+      }
+      document.getElementById("infoModal").classList.remove("hidden");
+    }
 
-<script>
-  function showPrivacy() {
-    document.getElementById("easter-egg-title").innerText = "Privacy Policy (Kinda)";
-    document.getElementById("easter-egg-content").innerText = 
-      "We deeply respect your privacy. That’s why we collect absolutely nothing. Seriously, we don’t even have a database yet.";
-    document.getElementById("easter-egg-modal").classList.remove("hidden");
-  }
-
-  function showTerms() {
-    document.getElementById("easter-egg-title").innerText = "Terms & Conditions";
-    document.getElementById("easter-egg-content").innerText = 
-      "By using this website, you agree to: 1) Not sue us for delays. 2) Not expect an actual product anytime soon. 3) Send us a cool meme if you find this.";
-    document.getElementById("easter-egg-modal").classList.remove("hidden");
-  }
-
-  function hideEasterEgg() {
-    document.getElementById("easter-egg-modal").classList.add("hidden");
-  }
-</script>
-
+    function hideInfo() {
+      document.getElementById("infoModal").classList.add("hidden");
+    }
+  </script>
 
   <!-- AOS Animation Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
